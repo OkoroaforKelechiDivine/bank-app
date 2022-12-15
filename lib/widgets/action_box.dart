@@ -1,4 +1,4 @@
-import 'package:banking_app/theme/colors.dart';
+import 'package:bank_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class ActionBox extends StatelessWidget {
@@ -12,7 +12,6 @@ class ActionBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Container(
-        // width: double.infinity,
           height: 130,
           padding: const EdgeInsets.only(top: 20, bottom: 20, left: 5, right: 5),
           decoration: BoxDecoration(
@@ -32,13 +31,13 @@ class ActionBox extends StatelessWidget {
               Container(
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: secondary
                   ),
                   child: Icon(icon, size: 28, color: color,)
               ),
-              SizedBox(height: 13),
+              const SizedBox(height: 13),
               Text(title, style: TextStyle(color: color, fontSize: 13, fontWeight: FontWeight.w600),)
             ],
           )
