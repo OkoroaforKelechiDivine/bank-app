@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'avatar_image.dart';
-
 class UserBox extends StatelessWidget {
-  UserBox({
-    Key? key, required this.user, this.isSVG = false, this.width = 55, this.height = 55
-  })
-      : super(key: key);
+  UserBox({ Key? key, required this.user, this.isSVG = false, this.width = 55, this.height = 55}) : super(key: key);
   final user;
   double width;
   double height;
@@ -19,8 +15,8 @@ class UserBox extends StatelessWidget {
         AvatarImage(user["image"],
           isSVG: isSVG, width: width, height: height,
         ),
-        const SizedBox(height: 8,),
-        Text(user["fname"], style: const TextStyle(fontWeight: FontWeight.w500),)
+        SizedBox(height: 8,),
+        Text(user["fname"], style: TextStyle(fontWeight: FontWeight.w500),)
       ],
     );
   }

@@ -3,6 +3,7 @@ import 'package:bank_app/theme/colors.dart';
 import 'package:bank_app/widgets/bottombar_item.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 class Home extends StatefulWidget {
   const Home({ Key? key }) : super(key: key);
 
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> {
     return Container(
       decoration: BoxDecoration(
         color: appBgColor.withOpacity(.95),
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
             topLeft: Radius.circular(40),
             topRight: Radius.circular(40)
         ),
@@ -34,9 +35,9 @@ class _HomeState extends State<Home> {
 
   Widget getHomeButton(){
     return Container(
-      margin: const EdgeInsets.only(top: 35),
-      padding: const EdgeInsets.all(5),
-      decoration: const BoxDecoration(
+      margin: EdgeInsets.only(top: 35),
+      padding: EdgeInsets.all(5),
+      decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: bottomBarColor,
       ),
@@ -47,12 +48,12 @@ class _HomeState extends State<Home> {
           });
         },
         child: Container(
-            padding: const EdgeInsets.all(10),
-            decoration: const BoxDecoration(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
               color: primary,
               shape: BoxShape.circle,
             ),
-            child: const Icon(Icons.add, color: Colors.white, size: 28,)
+            child: Icon(Icons.add, color: Colors.white, size: 28,)
         ),
       ),
     );
@@ -64,7 +65,7 @@ class _HomeState extends State<Home> {
       width: double.infinity,
       decoration: BoxDecoration(
           color: bottomBarColor,
-          borderRadius: const BorderRadius.only(
+          borderRadius: BorderRadius.only(
               topLeft: Radius.circular(25),
               topRight: Radius.circular(25)
           ),
@@ -73,7 +74,7 @@ class _HomeState extends State<Home> {
                 color: shadowColor.withOpacity(0.1),
                 blurRadius: .5,
                 spreadRadius: .5,
-                offset: const Offset(0, 1)
+                offset: Offset(0, 1)
             )
           ]
       ),
@@ -89,8 +90,7 @@ class _HomeState extends State<Home> {
                     });
                   },
                 ),
-                BottomBarItem(Icons.account_balance_wallet_rounded, "", isActive: activeTab == 1,
-                  activeColor: primary,
+                BottomBarItem(Icons.account_balance_wallet_rounded, "", isActive: activeTab == 1, activeColor: primary,
                   onTap: () {
                     setState(() {
                       activeTab = 1;
@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
     return
       IndexedStack(
         index: activeTab,
-        children: const <Widget>[
+        children: <Widget>[
           HomePage(),
           Center(
             child: Text("Wallet",style: TextStyle(

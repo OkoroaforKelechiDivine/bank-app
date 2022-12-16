@@ -1,6 +1,5 @@
 import 'package:bank_app/theme/colors.dart';
 import 'package:flutter/material.dart';
-
 class BalanceCard extends StatelessWidget {
   const BalanceCard({ Key? key }) : super(key: key);
 
@@ -20,16 +19,16 @@ class BalanceCard extends StatelessWidget {
                   color: shadowColor.withOpacity(0.1),
                   spreadRadius: 1,
                   blurRadius: 1,
-                  offset: const Offset(1, 1), // changes position of shadow
+                  offset: Offset(1, 1), // changes position of shadow
                 ),
               ],
               image: DecorationImage(
                 colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
-                image: const AssetImage('assets/images/bgcard.png'),
+                image: AssetImage('assets/images/bgcard.png'),
               )
           ),
           child: Column(
-            children: const [
+            children: [
               SizedBox(height: 25,),
               Text("Your Balance", style: TextStyle(color: Colors.grey, fontSize: 14, ),),
               SizedBox(height: 10,),
@@ -41,13 +40,13 @@ class BalanceCard extends StatelessWidget {
             top: 100,
             left: 0, right: 0,
             child: Container(
-                padding: const EdgeInsets.all(5),
+                padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     color: secondary,
                     shape: BoxShape.circle,
                     border: Border.all()
                 ),
-                child: const Icon(Icons.add)
+                child: Icon(Icons.add)
             )
         )
       ],

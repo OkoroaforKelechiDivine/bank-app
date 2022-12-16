@@ -21,7 +21,6 @@ class _HomePageState extends State<HomePage> {
     return
       Scaffold(
         backgroundColor: Colors.transparent,
-        // appBar: getAppBar(),
         body: getBody(),
       );
   }
