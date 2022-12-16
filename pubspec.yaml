@@ -1,5 +1,6 @@
 name: bank_app
 description: A flutter bank applicaition
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -9,19 +10,36 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  flutter_svg: ^0.22.0
-  multiavatar: ^0.1.5
-  badges: ^2.0.2
+  cupertino_icons:
+  gap:
+  fl_chart:
+  flutter_lints: ^2.0.0
+  shared_preferences: ^2.0.12
+  provider: ^6.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 
-  flutter_lints: ^2.0.0
-
 flutter:
   uses-material-design: true
+  fonts:
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans_Regular.ttf
+        - asset: assets/fonts/DMSans_Medium.ttf
+        - asset: assets/fonts/DMSans_Bold.ttf
+
+    - family: IconlyBold
+      fonts:
+        - asset: assets/fonts/Iconly_Bold.ttf
+
+    - family: IconlyBroken
+      fonts:
+        - asset: assets/fonts/Iconly_Light.ttf
+
   assets:
-    - assets/images/
+    - assets/
+    - assets/memoji/
+    - assets/cards/

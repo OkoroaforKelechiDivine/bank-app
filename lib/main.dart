@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
-import 'pages/home.dart';
-import 'theme/colors.dart';
+import 'package:bank_app/utils/styles.dart';
+import 'package:bank_app/view_models/view_models.dart';
+import 'package:bank_app/widgets/bottom_nav.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My bank application',
-      theme: ThemeData(
-        primaryColor: primary,
-        brightness: Brightness.light,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ViewModel())
+      ],
+      child: MaterialApp(
+        title: 'Flutter Banking App',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          fontFamily: 'DMSans',
+          primaryColor: Styles.primaryColor,
+          backgroundColor: Styles.primaryColor,
+        ),
+        home: const BottomNav(),
       ),
-      home: const Home(),
     );
   }
 }
